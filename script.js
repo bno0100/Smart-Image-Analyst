@@ -1,7 +1,7 @@
 // Configuration
 // 🔴 هام: ضع مفتاح API الخاص بك هنا ليعمل التحليل الحقيقي
 // احصل عليه مجاناً من: https://aistudio.google.com/app/apikey
-const API_KEY = 'AIzaSyCj8A8Uxk07iapq8HW-FzxTt5sQQvxTuMI';
+const API_KEY = 'AIzaSyD9sa5G5s_ucVdloUezmNIich7HTtWKVuc';
 
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
@@ -226,14 +226,14 @@ function getPromptForMode(mode) {
 }
 
 async function callGeminiAPI(base64Image, promptText, statusElement) {
-    // استخدام الموديل المتوفر في حسابك (تم التأكد منه)
-    const model = 'gemini-1.5-flash';
+    // استخدام الموديل الأحدث والأكثر استقراراً في هذا الإصدار
+    const model = 'gemini-2.5-flash'; // <--- تم التعديل إلى gemini-2.5-flash
 
     try {
         if (statusElement) statusElement.innerHTML += `<p style="color: #94a3b8; font-size: 0.8em;">.. جاري الاتصال بالموديل: ${model}...</p>`;
 
-        // استخدام v1beta لأنه الأنسب للموديلات الجديدة
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY.trim()}`;
+        // استخدام v1 وهو الإصدار المستقر للـ API
+        const url = `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${API_KEY.trim()}`; // <--- تم التعديل من v1beta إلى v1
 
         const response = await fetch(url, {
             method: 'POST',
