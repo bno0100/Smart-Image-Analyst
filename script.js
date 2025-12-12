@@ -227,7 +227,7 @@ function getPromptForMode(mode) {
 
 async function callGeminiAPI(base64Image, promptText, statusElement) {
     // استخدام الموديل المتوفر في حسابك (تم التأكد منه)
-    const model = 'gemini-2.0-flash';
+    const model = 'gemini-1.5-flash';
 
     try {
         if (statusElement) statusElement.innerHTML += `<p style="color: #94a3b8; font-size: 0.8em;">.. جاري الاتصال بالموديل: ${model}...</p>`;
@@ -303,4 +303,5 @@ function typeWriterEffect(text, element) {
         element.style.opacity = opacity;
         if (opacity >= 1) clearInterval(fadeIn);
     }, 30);
+
 }
