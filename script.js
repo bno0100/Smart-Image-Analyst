@@ -1,7 +1,7 @@
 // Configuration
 // 🔴 هام: ضع مفتاح API الخاص بك هنا ليعمل التحليل الحقيقي
 // احصل عليه مجاناً من: https://aistudio.google.com/app/apikey
-const API_KEY = 'AIzaSyD9sa5G5s_ucVdloUezmNIich7HTtWKVuc';
+const API_KEY = 'AIzaSyAjApz8P5OnzlFWqrgDDe791Oc1iBXl1Wo';
 
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
@@ -305,3 +305,4 @@ function typeWriterEffect(text, element) {
     }, 30);
 
 }
+
